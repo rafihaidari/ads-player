@@ -1,0 +1,139 @@
+#wrap {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  border-bottom: 3px solid #eee;
+  margin-bottom: 20px;
+}
+
+aside {
+  float: left;
+  width: 300px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  position: fixed;
+}
+
+section {
+  padding: 0 20px;
+  float: right;
+  width: 700px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.rhAds-vid-container {
+  display: flex;
+  background-color: #ccc;
+  justify-content: center;
+  align-items: center;
+}
+
+.rhAds-logo {
+  display: flex;
+  position: absolute;
+  bottom: 8px;
+  width: 25px;
+  flex-wrap: wrap;
+  right: 8px;
+  z-index: 1000;
+}
+.rhAds-video {
+  width: 100%;
+}
+.rhAds-video-block {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  overflow: hidden;
+}
+
+.rhAds-video-block:hover .rhAds-video-controls {
+  transform: translate(0);
+}
+.rhAds-video-controls {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateY(105%) translateY(-6px);
+  transition: all 0.3s ease-in-out;
+}
+
+.rhAds-video-buttons-block {
+  padding: 5px;
+}
+.rhAds-video-buttons-block button {
+  background: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  border-radius: 20px;
+  color: #ccc;
+}
+
+.rhAds-video-buttons-block button.play::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 0;
+  height: 10px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 6px solid;
+  top: 4px;
+  left: 7px;
+}
+
+.rhAds-video-buttons-block button.pause::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  left: 6px;
+  top: 6px;
+  border-left: 2px solid;
+  border-right: 2px solid;
+}
+
+.rhAds-progress-bar {
+  height: 5px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ccc;
+}
+.rhAds-progress-bar-color {
+  background-image: linear-gradient(to right, #116da4, #2f8abb);
+  height: 5px;
+  width: 100%;
+}
+
+.mute-unmute {
+  position: absolute;
+  color: #fff;
+  top: 4px;
+  right: 5px;
+  font-family: monospace;
+  background: #0000006b;
+  padding: 0px 5px 2px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
